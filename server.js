@@ -16,31 +16,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"))
 
-// Star Wars Characters (DATA)
-// =============================================================
-// var characters = [
-//   {
-//     routeName: "yoda",
-//     name: "Yoda",
-//     role: "Jedi Master",
-//     age: 900,
-//     forcePoints: 2000
-//   },
-//   {
-//     routeName: "darthmaul",
-//     name: "Darth Maul",
-//     role: "Sith Lord",
-//     age: 200,
-//     forcePoints: 1200
-//   },
-//   {
-//     routeName: "obiwankenobi",
-//     name: "Obi Wan Kenobi",
-//     role: "Jedi Master",
-//     age: 55,
-//     forcePoints: 1350
-//   }
-// ];
 
 // Routes
 // =============================================================
@@ -66,9 +41,7 @@ app.get("/api/notes", (req, res) => {
 app.post("/api/notes", (req, res) => {
   // Should receive a new note to save on the request body, 
   //add it to the `db.json` file, and then return the new note to the client.
-  // var newcharacter = req.body;
-  // console.log(req.body)
-  // console.log(newcharacter);
+
   
   var newNote = req.body;
   var newNoteId = uuidv4(); 
